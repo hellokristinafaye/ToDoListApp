@@ -25,6 +25,8 @@ function addTask() {
     }
     // clears input field upon button click
     inputBox.value = '';
+    // updates local storage
+    saveData();
 }
 // this dictates what happens when you click on certain elements. here it's (LI and SPAN)
 listContainer.addEventListener('click', function (e) {
@@ -33,11 +35,24 @@ listContainer.addEventListener('click', function (e) {
         // this will change the styling - so the checkmark and through-line will appear
         e.target.classList.toggle("checked");
         // checks if the user is clicking the SPAN element, aka the close button
+        // updates local storage
+        saveData();
     } else if (e.target.tagName === "SPAN") {
         // deletes the span element in question from the listContainer
         e.target.parentElement.remove();
+        // updates local storage
+        saveData();
     }
 }, false);
+
+
+// local storage
+function saveData() {
+    localStorage.setItem('data', listContainer.innerHTML);
+}
+function showTask() {
+    listContainer.innerHTML = localStorage.getItem('data');
+}
 
 // so the return button works inside the input box
 document.addEventListener("keydown", event => {
@@ -47,3 +62,5 @@ document.addEventListener("keydown", event => {
     }
 })
 
+// displays local storage
+showTask()
