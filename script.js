@@ -13,6 +13,15 @@ function addTask() {
         // adds the li element to the listContainer element as a child
         listContainer.appendChild(li);
 
+        // adding a span for the close button
+        // declaring a variable that allows dynamic JS access to an element
+        // this line CREATES a new span element and we're accessing it in JS via the variable span
+        let span = document.createElement('span');
+        // this sets the HTML content of the span element to this special code that translates to a close icon
+        span.innerHTML = '\u00d7';
+        // adding the newly created span element to the newly created li element
+        li.appendChild(span);
+
     }
     // clears input field upon button click
     inputBox.value = '';
