@@ -47,6 +47,10 @@ listContainer.addEventListener('click', function (e) {
 
 
 // local storage
+// remember that you basically need 2 functions when you wanna utilize local storage, at least like this. 
+// you need one function (saveData) to store your chosen info (in this case it's listContainer's HTML content and styling)
+// and the second function you need will display the saved data.  This one needs to run like, all the time.  like every time you refresh the page so it's at a global level at the bottom of the file. 
+// The saveData() as to go everywhere you would be changing the HTML content/styling in question. 
 function saveData() {
     localStorage.setItem('data', listContainer.innerHTML);
 }
