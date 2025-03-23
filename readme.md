@@ -12,6 +12,8 @@ Features:
 
 Notes:
 
+- added a bunch of comments in the JS file to clarify what each line does.
+
 Challenges:
 
 Future Development:
