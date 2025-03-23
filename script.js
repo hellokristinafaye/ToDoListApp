@@ -12,7 +12,10 @@ function addTask() {
         li.innerHTML = inputBox.value;
         // adds the li element to the listContainer element as a child
         listContainer.appendChild(li);
+
     }
+    // clears input field upon button click
+    inputBox.value = '';
 }
 
 // so the return button works inside the input box
