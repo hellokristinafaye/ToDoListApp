@@ -26,6 +26,18 @@ function addTask() {
     // clears input field upon button click
     inputBox.value = '';
 }
+// this dictates what happens when you click on certain elements. here it's (LI and SPAN)
+listContainer.addEventListener('click', function (e) {
+    // checks if the user is clicking the LI element, aka the list item/task
+    if (e.target.tagName === "LI") {
+        // this will change the styling - so the checkmark and through-line will appear
+        e.target.classList.toggle("checked");
+        // checks if the user is clicking the SPAN element, aka the close button
+    } else if (e.target.tagName === "SPAN") {
+        // deletes the span element in question from the listContainer
+        e.target.parentElement.remove();
+    }
+}, false);
 
 // so the return button works inside the input box
 document.addEventListener("keydown", event => {
