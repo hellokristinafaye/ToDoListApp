@@ -9,18 +9,29 @@ icon.onclick = function () {
     document.body.classList.toggle("dark-theme");
     console.log(document.body.classList)
     // updates local storage
-    saveData();
+    saveMode();
+    console.log(document.body.classList);
     // this conditional statement just changes the display of the button based on the above classList changes
     if (document.body.classList.contains("dark-theme")) {
         icon.src = "icons/sun.png";
         // updates local storage
-        saveData();
+        saveMode()
     } else {
         icon.src = "icons/moon.png";
         // updates local storage
-        saveData();
+        saveMode()
     }
 }
+
+// making light/dark mode persistent
+function saveMode() {
+    localStorage.setItem('mode', document.body.classList);
+    // console.log(listContainer.innerHTML);
+}
+function showMode() {
+    document.body.classList = localStorage.getItem('mode');
+}
+showMode()
 // end dark/light mode code
 
 

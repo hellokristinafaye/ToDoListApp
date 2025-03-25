@@ -22,7 +22,7 @@
     --font-color: #555;
     --button-background-color: #ff5945;
     --button-font-color: #fff;
-    /* transition: .75s; */
+    transition: .75s;
 }
 
 .dark-theme {
