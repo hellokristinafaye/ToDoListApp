@@ -39,6 +39,7 @@ showMode()
 
 
 function addTask() {
+    // this function is called in the HTML file in the button inline JS (onclick="addTask()") and that's why it isn't called anywhere in here, and why the "upon click" functions work below.
     // checks if there's anything in the input box. if not it sends and alert window up with the following message.
     if (inputBox.value === "") {
         alert("You must write something!");
