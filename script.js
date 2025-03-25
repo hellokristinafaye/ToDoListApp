@@ -26,12 +26,12 @@ icon.onclick = function () {
 // making light/dark mode persistent
 function saveMode() {
     localStorage.setItem('mode', document.body.classList);
-    localStorage.setItem('icon', icon.innerHTML);
+    localStorage.setItem('icon', icon.src);
     // console.log(listContainer.innerHTML);
 }
 function showMode() {
     document.body.classList = localStorage.getItem('mode');
-    icon.innerHTML = localStorage.getItem('icon');
+    icon.src = localStorage.getItem('icon');
 
 }
 showMode()
