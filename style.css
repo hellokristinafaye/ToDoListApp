@@ -3,7 +3,40 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+}f
+
+/* Dark Mode Button Styling Start */
+#icon {
+    width: 30px;
+    cursor: pointer;
+    /* position: absolute; */
+    margin-left: 20px;
 }
+/* Dark Mode Button Styling End*/
+
+/* Dark Mode Color Variables/Rules Start */
+:root {
+    --app-background-color: #fff;
+    --app-title-color: #002765;
+    --search-background: #edeef0;
+    --font-color: #555;
+    --button-background-color: #ff5945;
+    --button-font-color: #fff;
+    /* transition: .75s; */
+}
+
+.dark-theme {
+    --app-background-color: #fff;
+    --app-title-color: #002765;
+    --search-background: #edeef0;
+    --font-color: #555;
+    --button-background-color: #ff5945;
+    --button-font-color: #fff;
+}
+/* Dark Mode Color Variables/Rules End */
+
+
+
 .container {
     width: 100%;
     min-height: 100vh;
@@ -13,13 +46,13 @@
 .todo-app {
     width: 100%;
     max-width: 540px;
-    background: #fff;
+    background: var(--app-background-color);
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
 .todo-app h2 {
-    color: #002765;
+    color: var(--app-title-color);
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -32,7 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #edeef0;
+    background: var(--search-background);
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
@@ -48,8 +81,8 @@ button {
     border: none;
     outline: none;
     padding: 16px 50px;
-    background: #ff5945;
-    color: #fff;
+    background: var(--button-background-color);
+    color: var(--button-font-color);
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
@@ -76,7 +109,7 @@ ul li::before {
     left: 8px;
 }
 ul li.checked {
-    color: #555;
+    color: var(--font-color);
     text-decoration: line-through;
 }
 ul li.checked::before {
@@ -90,12 +123,12 @@ ul li span {
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: #555;
+    color: var(--font-color);
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
 }
 
 ul li span:hover {
-    background: #edeef0;
+    background: var(--search-background);
 }

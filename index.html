@@ -14,16 +14,23 @@
     <!-- Google Fonts CDN for Poppins End -->
 </head>
 <body>
-    <div class="container">
-        <div class="todo-app">
-            <h2 class="">To-Do List <img src="images/icon.png" alt="" class=""></h2>
 
-            <!-- Input box and button start -->
+    <div class="container">
+
+        <div class="todo-app">
+
+            <h2>To-Do List 
+                <img src="images/icon.png" alt="illustration of a check list on a clipboard">
+                <!-- Dark Mode Toggle Button Start -->
+                <img src="icons/moon.png" alt="dark grey illustration of a crescent moon" id="icon">
+                <!-- Dark Mode Toggle Button End -->
+            </h2>
+            <!-- Input box and button Start -->
             <div class="row">
-                <input type="text" class="" id="input-box" placeholder="Add your text">
+                <input type="text" id="input-box" placeholder="Add your text">
                 <button onclick="addTask()" class="">Add</button>
             </div>
-            <!-- Input box and button end -->
+            <!-- Input box and button End -->
 
             <ul id="list-container">
                 <!-- placeholder TASK LIST content, just used for styling START -->
@@ -31,14 +38,10 @@
                 <li class="">Task 2</li>
                 <li class="">Task 3</li> -->
                 <!-- placeholder TASK LIST content, just used for styling END -->
-
-
-
             </ul>
 
-            
-
         </div>
+
     </div>
 
     <script src="script.js"></script>
