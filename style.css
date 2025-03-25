@@ -26,12 +26,12 @@
 }
 
 .dark-theme {
-    --app-background-color: #fff;
-    --app-title-color: #002765;
+    --app-background-color: #555;
+    --app-title-color: #ff5945;
     --search-background: #edeef0;
-    --font-color: #555;
-    --button-background-color: #ff5945;
-    --button-font-color: #fff;
+    --font-color: #fff;
+    --button-background-color: #002765;
+    --button-font-color: #555;
 }
 /* Dark Mode Color Variables/Rules End */
 
