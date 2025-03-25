@@ -1,6 +1,29 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
+// dark/light mode code 
+var icon = document.getElementById("icon");
+
+icon.onclick = function () {
+    // I believe .toggle() actually switches the class list content?? 
+    document.body.classList.toggle("dark-theme");
+    console.log(document.body.classList)
+    // updates local storage
+    saveData();
+    // this conditional statement just changes the display of the button based on the above classList changes
+    if (document.body.classList.contains("dark-theme")) {
+        icon.src = "icons/sun.png";
+        // updates local storage
+        saveData();
+    } else {
+        icon.src = "icons/moon.png";
+        // updates local storage
+        saveData();
+    }
+}
+// end dark/light mode code
+
+
 function addTask() {
     // checks if there's anything in the input box. if not it sends and alert window up with the following message.
     if (inputBox.value === "") {
@@ -53,6 +76,7 @@ listContainer.addEventListener('click', function (e) {
 // The saveData() as to go everywhere you would be changing the HTML content/styling in question. 
 function saveData() {
     localStorage.setItem('data', listContainer.innerHTML);
+    // console.log(listContainer.innerHTML);
 }
 function showTask() {
     listContainer.innerHTML = localStorage.getItem('data');
