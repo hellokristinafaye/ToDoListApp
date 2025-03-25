@@ -7,18 +7,16 @@ var icon = document.getElementById("icon");
 icon.onclick = function () {
     // I believe .toggle() actually switches the class list content?? 
     document.body.classList.toggle("dark-theme");
-    console.log(document.body.classList)
-    // updates local storage
+    // updates local storage specific to the mode colors and icon
     saveMode();
-    console.log(document.body.classList);
     // this conditional statement just changes the display of the button based on the above classList changes
     if (document.body.classList.contains("dark-theme")) {
         icon.src = "icons/sun.png";
-        // updates local storage
+        // updates local storage specific to the mode colors and icon
         saveMode()
     } else {
         icon.src = "icons/moon.png";
-        // updates local storage
+        // updates local storage specific to the mode colors and icon
         saveMode()
     }
 }
@@ -29,11 +27,12 @@ function saveMode() {
     localStorage.setItem('icon', icon.src);
     // console.log(listContainer.innerHTML);
 }
+// pulls info (about the icon and mode) from local storage 
 function showMode() {
     document.body.classList = localStorage.getItem('mode');
     icon.src = localStorage.getItem('icon');
-
 }
+// displays info from local storage (just about the icon and light/dark mode)
 showMode()
 // end dark/light mode code
 
