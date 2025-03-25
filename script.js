@@ -9,7 +9,8 @@ icon.onclick = function () {
     document.body.classList.toggle("dark-theme");
     // updates local storage specific to the mode colors and icon
     saveMode();
-    // this conditional statement just changes the display of the button based on the above classList changes
+    // this conditional statement changes the display of the button based on the above classList changes
+    // and also saves this info to local storage via saveMode().
     if (document.body.classList.contains("dark-theme")) {
         icon.src = "icons/sun.png";
         // updates local storage specific to the mode colors and icon
@@ -32,7 +33,7 @@ function showMode() {
     document.body.classList = localStorage.getItem('mode');
     icon.src = localStorage.getItem('icon');
 }
-// displays info from local storage (just about the icon and light/dark mode)
+// displays info from local storage (just about the icon and light/dark mode) on page load
 showMode()
 // end dark/light mode code
 
@@ -61,7 +62,7 @@ function addTask() {
     }
     // clears input field upon button click
     inputBox.value = '';
-    // updates local storage
+    // updates local storage upon button click
     saveData();
 }
 // this dictates what happens when you click on certain elements. here it's (LI and SPAN)
