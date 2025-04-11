@@ -1,8 +1,12 @@
+// these variables are access points for HTML elements.
+// this one accesses the text box where the user enters their note
 const inputBox = document.getElementById("input-box");
+// this is for the box that will eventually hold the list of tasks
 const listContainer = document.getElementById("list-container");
 
 // dark/light mode code 
 var icon = document.getElementById("icon");
+
 
 icon.onclick = function () {
     // I believe .toggle() actually switches the class list content?? 
