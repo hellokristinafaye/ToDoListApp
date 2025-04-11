@@ -44,7 +44,7 @@ showMode()
 
 function addTask() {
     // this function is called in the HTML file in the button inline JS (onclick="addTask()") and that's why it isn't called anywhere in here, and why the "upon click" functions work below.
-    // checks if there's anything in the input box. if not it sends and alert window up with the following message.
+    // checks if there's anything in the input box. if not it sends an alert window up with the following message:
     if (inputBox.value === "") {
         alert("You must write something!");
     } else {
@@ -71,7 +71,7 @@ function addTask() {
     saveData();
 }
 // this dictates what happens when you click on certain elements. here it's (LI and SPAN)
-listContainer.addEventListener('click', function (e) {
+listContainer.addEventListener('click', (e)=> {
     // checks if the user is clicking the LI element, aka the list item/task
     if (e.target.tagName === "LI") {
         // this will change the styling - so the checkmark and through-line will appear
